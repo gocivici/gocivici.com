@@ -1,0 +1,36 @@
+<aside class="site">
+
+  {{ if and .IsPage (ne .Params.toc false) }}
+  <section>
+    <header>Table Of Contents</header>
+    <div>{{ .TableOfContents }}</div>
+  </section>
+  {{ end }}
+
+  {{ if ne (len .Site.Menus) 0 }}
+
+  {{ end }}
+
+  <section>
+    <header>Latest Posts</header>
+    <div>
+      {{ range first 10 .Site.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+    </div>
+  </section>
+
+  {{ range $key, $value := .Site.Taxonomies }}
+  <section>
+    <header>{{ $key | singularize }}</header>
+    <div>
+      <ul>
+        {{ range first 10 $value.ByCount }}<li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
+
+</aside>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSehw_ytMhpuQ70gsEVV41OW18xTJcT9d7lxzf7e30Ztl8t9Ug/viewform" target="_blank"><button type="button" class="btn btn-outline-primary">Subscribe For E-mail Updates</button></a>
