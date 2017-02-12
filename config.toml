@@ -1,0 +1,11 @@
+baseurl = "https://gocivici.com/blog/"
+languageCode = "en-us"
+title = "blog.write(projectLogs)"
+author = "Görkem Bozkurt"
+copyright = "Copyright (c) 2016, Görkem Bozkurt; all rights reserved."
+googleAnalytics = "UA-83687635-2"
+[params]
+  disqusShortname = "gocivici"
+[taxonomies]
+  category = "categories"
+  tag = ""

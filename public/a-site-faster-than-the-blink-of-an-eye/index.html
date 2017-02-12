@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.16" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic|Montserrat:400,700|Cardo:400italic|Advent+Pro:100' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Noticia+Text:400,700|Marcellus+SC'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="https://gocivici.com/blog/css/styles.css">
+    <link rel="stylesheet" href="https://gocivici.com/blog/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://gocivici.com/blog/index.xml">
+
+    
+    <title>Faster Than the Blink of an Eye - blog.write(projectLogs)</title>
+    <meta property='og:title' content="Faster Than the Blink of an Eye - blog.write(projectLogs)">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="https://gocivici.com/blog/a-site-faster-than-the-blink-of-an-eye/">
+    
+    <meta property="og:image" content="https://gocivici.com/blog/images/lol.png">
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https:\/\/gocivici.com\/blog\/"
+    },
+    "headline": "Faster Than the Blink of an Eye |  ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "",
+      "height": 700,
+      "width": 700
+    },
+    "datePublished": "2016-09-29T00:00:00JST",
+    "dateModified": "2016-09-29T00:00:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "image": "https:\/\/gocivici.com\/blog\/images/logo.png"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Copyright (c) 2016, Görkem Bozkurt; all rights reserved.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/gocivici.com\/blog\/images/logo.png",
+        "height": 60,
+        "width": 60
+      }
+    },
+    "description": ""
+  }
+</script>
+</head>
+
+<body>
+
+  <header class="l-header">
+    <div class="p-logo">
+      <a href="https://gocivici.com/blog/">blog.write(projectLogs)</a>
+    </div>
+  </header>
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-9">
+
+      <article class="single">
+        <div class="image" style="background-image: url(https://gocivici.com/blog/images/lol.png);"></div>
+        <div class="body">
+          <h1>Faster Than the Blink of an Eye</h1>
+          
+
+<p>It has been 2 months since I published my project <a href="http://www.instructables.com/id/Star-Track-Arduino-Powered-Star-Pointer-and-Tracke/">Star Track</a> on Instructables. Publishing one of my projects online was a big step for me, and the main reason for that was the feedback I got. While expecting no feedback at all, I got mostly feedback like this from various platforms:</p>
+
+<blockquote>
+<ul>
+<li><p>You can use a small NEMA 17 steppers. With 200steps/rev and the micro stepping features of the drivers, you can get a reasonably high precision.</p></li>
+
+<li><p>With A4988 drivers, you can move the steppers only with 4 pins saving another 4, so probably is enough with only one Arduino. Hope this helps and waiting for the V2 soon!!!</p></li>
+</ul>
+</blockquote>
+
+<p>After I published the project I put it under my desk as I always do, It was waiting there to be taken apart for future projects. But after the feedback I got, I decided to keep it. Because there was a ton of improvements to make.</p>
+
+<p>While Publishing on Instructables got me good feedback, It was just the final product, with instructions on how to assemble it. Because this is what Instructables is for. It didn&rsquo;t include the hundreds of errors I got, the prototypes that failed, other hardware I used that did not perform well etc.
+This is why I decided to start a <strong>Blog</strong>. Where I will post problems I encounter during builds. Thoughts on projects, prototypes etc.  Since posts will be mostly logs of my projects I called it <strong>ProjectLog</strong>.</p>
+
+<h2 id="starting-a-blog">Starting a Blog</h2>
+
+<p>There are a lot of services like Wordpress, Blogger. That you can start a blog under 5 minutes. They are easy to use and you don&rsquo;t have to worry about the backend of your site. So why not use it? Here are a few reasons from my perspective:</p>
+
+<h3 id="1-not-lightweight">1. Not Lightweight</h3>
+
+<p>Wordpress is a PHP based site(dynamic). PHP files will take more time to execute than HTML files. So it will take more time to load than a static website.</p>
+
+<h3 id="2-customization">2. Customization</h3>
+
+<p>Customization of a Wordpress site needs a knowledge of the Wordpress framework itself to be able to modify the files.</p>
+
+<p>I need a blog that is lightweight and since I&rsquo;ll only post project logs I don&rsquo;t need any other functionality. A blog with a theme I can edit, and easily Customize. this is where <a href="https://davidwalsh.name/introduction-static-site-generators"><strong>static site generators</strong></a> come in.</p>
+
+<p>With static site generators, I can generate the blog on my desktop and upload it to various services like GitHub, Amazon, google.
+The website will be fast, secure and lightweight.</p>
+
+<p>For a static site generator, I choose <a href="https://gohugo.io/">Hugo</a>. After you choose a theme and generate your site following the instructions your site is ready to deploy.</p>
+
+<h2 id="hosting-on-amazon-s3">Hosting on Amazon S3</h2>
+
+<p>Amazon s3 is great for storing files. It&rsquo;s cheap, fast, reliable and secure. What you may not know is that you can also host static websites on this platform.</p>
+
+<p>hosting a static webpage is ridiculously cheap. S3 has a pay-as-you-use system. Even with a lot of users visiting your website you don&rsquo;t pay much. <a href="http://blogging.alastair.is/how-i-served-100k-users-without-crashing-and-only-spent-0-32/">Here is someone who served 100.000 users under 1 dollar with cloudFare distribution(more on this later) </a>
+After following the <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">documentation</a> on Amazon, your static website is now available at something like:</p>
+
+<pre><code>your-bucket.s3-website.eu-central-1.amazonaws.com
+</code></pre>
+
+<p>If you want to use your own domain name as I do, you can follow <a href="http://docs.aws.amazon.com/gettingstarted/latest/swh/getting-started-configure-route53.html">this guide on amazon route 53</a> and use route 53 as your dns service.</p>
+
+<h2 id="cloudfront-distribution">CloudFront Distribution</h2>
+
+<p>When you deploy your site on Amazon S3 you have to choose a region that is near to you. This region will be the server that contains your website. Let&rsquo;s say you chose the region as Frankfurt. Your page will load very fast if requested in that region. If someone from the US opens your site. It will take 3-5 seconds (depending on your web page size) to load. This is why a cloud Distribution is useful.</p>
+
+<p>A cloud distribution puts copies of files on servers all around the world(end points). If someone opens that file, It&rsquo;s served from the nearest server. And since the website we generated is static, It can be distributed around the world with CloudFront.
+<div style="text-align:center; margin-bottom:20px;"><img src ="https://docs.aws.amazon.com/gettingstarted/latest/swh/images/AWS_StaticWebsiteHosting_Architecture_4b.png" /></div></p>
+
+<p><a href="http://vvv.tobiassjosten.net/development/jekyll-blog-on-amazon-s3-and-cloudfront/">Here</a> is also a helpful link.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>After the cloud distrubution setup the website will be reachable around the world under 1 second. And the monthly bill from amazon will not exceed 1 dollar(I hope).</p>
+
+        </div>
+
+        <aside>
+          <section>
+            <div>
+              <div class="p-share">
+                <a href="http://www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fgocivici.com%2fblog%2fa-site-faster-than-the-blink-of-an-eye%2f&t=Faster%20Than%20the%20Blink%20of%20an%20Eye" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fgocivici.com%2fblog%2fa-site-faster-than-the-blink-of-an-eye%2f&text=Faster%20Than%20the%20Blink%20of%20an%20Eye&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+                <a href="https://plus.google.com/share?url=https%3a%2f%2fgocivici.com%2fblog%2fa-site-faster-than-the-blink-of-an-eye%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+                <a href="http://getpocket.com/edit?url=https%3a%2f%2fgocivici.com%2fblog%2fa-site-faster-than-the-blink-of-an-eye%2f&title=Faster%20Than%20the%20Blink%20of%20an%20Eye" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+              </div>
+            </div>
+          </section>
+
+          
+          
+
+<a href="https://gocivici.com">
+          <div id="profile">
+  <img id="image" src="https://pbs.twimg.com/profile_images/577229063296700416/lGHWRmAJ.jpeg" alt="roman" />
+  <div class="info">
+      <h2>Görkem Bozkurt</h2>
+      <p>Physics major at Bilkent University</p>
+
+      <p id="place">Ankara, Turkey</p>
+   </div>
+
+</div>
+</a>
+
+          <section>
+            <div>
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'gocivici';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+          </section>
+          
+          
+        </aside>
+
+      </article>
+
+    </div>
+    <div class="col-md-3">
+      <aside class="site">
+
+  
+  <section>
+    <header>Table Of Contents</header>
+    <div><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#starting-a-blog">Starting a Blog</a>
+<ul>
+<li><a href="#1-not-lightweight">1. Not Lightweight</a></li>
+<li><a href="#2-customization">2. Customization</a></li>
+</ul></li>
+<li><a href="#hosting-on-amazon-s3">Hosting on Amazon S3</a></li>
+<li><a href="#cloudfront-distribution">CloudFront Distribution</a>
+<ul>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav></div>
+  </section>
+  
+
+  
+
+  <section>
+    <header>Latest Posts</header>
+    <div>
+      
+      <article class="li">
+  <a href="https://gocivici.com/blog/a-site-faster-than-the-blink-of-an-eye/" class="clearfix">
+    <div class="image" style="background-image: url(https://gocivici.com/blog/images/lol.png);"></div>
+    <footer>
+      <div class="date">
+        <time>Thu, Sep 29, 2016</time>
+      </div>
+      <h2 class="title">Faster Than the Blink of an Eye</h2>
+    </footer>
+  </a>
+</article>
+
+      
+    </div>
+  </section>
+
+  
+  <section>
+    <header></header>
+    <div>
+      <ul>
+        
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header>category</header>
+    <div>
+      <ul>
+        <li><a href="https://gocivici.com/blog/categories/web-development">web-development</a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+
+</aside>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSehw_ytMhpuQ70gsEVV41OW18xTJcT9d7lxzf7e30Ztl8t9Ug/viewform" target="_blank"><button type="button" class="btn btn-outline-primary">Subscribe For E-mail Updates</button></a>
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="l-footer">
+  <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<p id="copyright" property="dc:rights">&copy;
+  <span property="dc:dateCopyrighted">2016,</span>
+  <span property="dc:publisher">Görkem Bozkurt</span>
+</p>
+</div>
+
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83687635-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
+
