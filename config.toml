@@ -1,4 +1,5 @@
 baseurl = "https://gocivici.com/blog/"
+theme: hugo_theme_robust
 languageCode = "en-us"
 title = "blog.write(projectLogs)"
 author = "Görkem Bozkurt"
