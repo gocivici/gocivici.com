@@ -7,11 +7,21 @@ title = "Faster Than the Blink of an Eye"
 type = "page"
 
 +++
+
+
 It has been 2 months since I published my project [Star Track](http://www.instructables.com/id/Star-Track-Arduino-Powered-Star-Pointer-and-Tracke/) on Instructables. Publishing one of my projects online was a big step for me, and the main reason for that was the feedback I got. While expecting no feedback at all, I got mostly feedback like this from various platforms:
 
-> *   You can use a small NEMA 17 steppers. With 200steps/rev and the micro stepping features of the drivers, you can get a reasonably high precision.
+<blockquote>
+<ul>
+<li>You can use a small NEMA 17 steppers. With 200steps/rev and the micro stepping features of the drivers, you can get a reasonably high precision.</li>
+</ul>
+</blockquote> 
 
-> *   With A4988 drivers, you can move the steppers only with 4 pins saving another 4, so probably is enough with only one Arduino. Hope this helps and waiting for the V2 soon!!!
+<blockquote>
+<ul>
+<li>With A4988 drivers, you can move the steppers only with 4 pins saving another 4, so probably is enough with only one Arduino. Hope this helps and waiting for the V2 soon!!!</li>
+</ul>
+</blockquote>
 
 After I published the project I put it under my desk as I always do, It was waiting there to be taken apart for future projects. But after the feedback I got, I decided to keep it. Because there was a ton of improvements to make.
 
@@ -21,15 +31,15 @@ While Publishing on Instructables got me good feedback, It was just the final pr
 
 There are a lot of services like Wordpress, Blogger. That you can start a blog under 5 minutes. They are easy to use and you don't have to worry about the backend of your site. So why not use it? Here are a few reasons from my perspective:
 
-### 1\. Not Lightweight
+### 1. Not Lightweight
 
 Wordpress is a PHP based site(dynamic). PHP files will take more time to execute than HTML files. So it will take more time to load than a static website.
 
-### 2\. Customization
+### 2. Customization
 
 Customization of a Wordpress site needs a knowledge of the Wordpress framework itself to be able to modify the files.
 
-I need a blog that is lightweight and since I'll only post project logs I don't need any other functionality. A blog with a theme I can edit, and easily Customize. this is where [**static site generators**](https://davidwalsh.name/introduction-static-site-generators) come in.
+I need a blog that is lightweight and since I'll only post project logs I don't need any other functionality. A blog with a theme I can edit, and easily Customize. this is where [static site generators](https://davidwalsh.name/introduction-static-site-generators) come in.
 
 With static site generators, I can generate the blog on my desktop and upload it to various services like GitHub, Amazon, google. The website will be fast, secure and lightweight.
 
@@ -43,6 +53,7 @@ hosting a static webpage is ridiculously cheap. S3 has a pay-as-you-use system. 
 
 ```
 your-bucket.s3-website.eu-central-1.amazonaws.com
+
 ```
 
 If you want to use your own domain name as I do, you can follow [this guide on amazon route 53](http://docs.aws.amazon.com/gettingstarted/latest/swh/getting-started-configure-route53.html) and use route 53 as your dns service.
@@ -62,3 +73,5 @@ A cloud distribution puts copies of files on servers all around the world(end po
 After the cloud distrubution setup the website will be reachable around the world under 1 second. And the monthly bill from amazon will not exceed 1 dollar(I hope).
 
 test
+
+test2
